@@ -1,3 +1,5 @@
+from chapter2.DoublyLinkedNode import DoublyLinkedNode
+
 class DoublyLinkedList:
 	def __init__(self):
 		self.head = None
@@ -55,7 +57,7 @@ class DoublyLinkedList:
 		if node_to_remove is not None:
 			self.remove_node(node_to_remove)
 			return True
-		return False # not found
+		return False
 
 	def remove_node(self, current_node):
 		successor = current_node.next
@@ -73,15 +75,12 @@ class DoublyLinkedList:
 
 	def sort(self):
 		if self.head is not None:
-			# Sort using the insertion sort algorithm
 			current_node = self.head.next
 			while current_node is not None:
 				next_node = current_node.next
 				search_node = current_node.previous
-				# Search for the insertion position
 				while search_node is not None and search_node.data > current_node.data:
 					search_node = search_node.previous
-				# Remove and re-insert current_node
 				if search_node is None:
 					self.remove_node(current_node)
 					current_node.previous = None
@@ -89,7 +88,6 @@ class DoublyLinkedList:
 				elif search_node.next is not current_node:
 					self.remove_node(current_node)
 					self.insert_node_after(search_node, current_node)
-				# Advance to next node
 				current_node = next_node
 
 	def print(self):
@@ -105,9 +103,3 @@ class DoublyLinkedList:
 			print(current.data, end=", ")
 			current = current.previous
 		print(current.data)
-
-class DoublyLinkedNode:
-	def __init__(self, initial_data):
-		self.data = initial_data
-		self.next = None
-		self.previous = None

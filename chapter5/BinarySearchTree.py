@@ -1,3 +1,5 @@
+from chapter5.BSTNode import BSTNode
+
 class BinarySearchTree:
     def __init__(self):
         self.root = None
@@ -37,71 +39,55 @@ class BinarySearchTree:
 
     def insert_key(self, key):
         if self.contains(key):
-            # Duplicate keys not allowed
             return False
-        # Create and insert a new node and return True
         self.insert_node(BSTNode(key))
         return True
 
     def remove(self, key):
         parent = None
         current_node = self.root
-        # Search for the node
         while current_node is not None:
-            # Check if current_node has a matching key
             if current_node.key == key:
                 if current_node.left is None and current_node.right is None:
-                    # Remove leaf
-                    if parent is None:  # Node is root
+                    if parent is None:
                         self.root = None
                     elif parent.left is current_node:
                         parent.left = None
                     else:
                         parent.right = None
-                    return True  # Node found and removed
+                    return True
                 elif current_node.left is not None and current_node.right is None:
-                    # Remove node with only left child
-                    if parent is None:  # Node is root
+                    if parent is None:
                         self.root = current_node.left
                     elif parent.left is current_node:
                         parent.left = current_node.left
                     else:
                         parent.right = current_node.left
-                    return True  # Node found and removed
+                    return True
                 elif current_node.left is None and current_node.right is not None:
-                    # Remove node with only right child
-                    if parent is None:  # Node is root
+                    if parent is None:
                         self.root = current_node.right
                     elif parent.left is current_node:
                         parent.left = current_node.right
                     else:
                         parent.right = current_node.right
-                    return True  # Node found and removed
+                    return True
                 else:
-                    # Remove node with two children
-
-                    # Find successor (leftmost child of right subtree)
                     successor = current_node.right
                     while successor.left is not None:
                         successor = successor.left
 
-                    # Copy successor's key to current node
                     current_node.key = successor.key
-
-                    # Reassign parent, current_node, and key so that loop
-                    # continues with new key
                     parent = current_node
                     current_node = current_node.right
                     key = successor.key
             elif current_node.key < key:
-                # Search right
                 parent = current_node
                 current_node = current_node.right
             else:
-                # Search left
                 parent = current_node
                 current_node = current_node.left
-        return False  # Node not found
+        return False
 
     def print_node(self, node):
         if node is None:
@@ -130,35 +116,25 @@ class BinarySearchTree:
             self.print_level(node.left, level - 1)
             self.print_level(node.right, level - 1)
 
-    def printTree(self):
-        self._printTree(self.root, "", True)
+    def print_tree(self):
+        self.print_self(self.root, "", True)
 
-    def _printTree(self, node, prefix, is_left):
+    def print_self(self, node, prefix, is_left):
         if node is None:
             return
 
-        # Print right subtree first (so it appears on top)
         if node.right is not None:
-            self._printTree(
+            self.print_self(
                 node.right,
                 prefix + ("│   " if is_left else "    "),
                 False
             )
 
-        # Print current node
         print(prefix + ("└── " if is_left else "┌── ") + str(node.key))
 
-        # Print left subtree
         if node.left is not None:
-            self._printTree(
+            self.print_self(
                 node.left,
                 prefix + ("    " if is_left else "│   "),
                 True
             )
-
-
-class BSTNode:
-    def __init__(self, node_key, left_child = None, right_child = None):
-        self.key = node_key
-        self.left = left_child
-        self.right = right_child
