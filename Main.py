@@ -11,3 +11,4 @@ from chapter5 import test
 from chapter6 import test
 from chapter7 import test
 from chapter8 import test
+from chapter9 import test
