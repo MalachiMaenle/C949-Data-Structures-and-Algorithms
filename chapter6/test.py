@@ -1,8 +1,8 @@
 from chapter6.AVLTree import AVLTree
 
-print('\033[1;32m' + '-----Chapter 6-----' + '\033[0m')
+print('\n\033[1;32m' + '-----Chapter 6-----' + '\033[0m')
 
-print('\033[31m' + 'AVLTree: ' + '\033[0m')
+print('\n\033[31m' + 'AVLTree: ' + '\033[0m')
 # region AVLTree test
 keys_to_insert = [10, 20, 5, 22, 15, 47, 19, 3, 12, 18]
 keys_to_remove = [12, 20, 30]

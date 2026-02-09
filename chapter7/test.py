@@ -1,9 +1,9 @@
 from chapter7.MaxHeap import MaxHeap
 from queue import PriorityQueue
 
-print('\033[1;32m' + '-----Chapter 7-----' + '\033[0m')
+print('\n\033[1;32m' + '-----Chapter 7-----' + '\033[0m')
 
-print('\033[31m' + 'MaxHeap: ' + '\033[0m')
+print('\n\033[31m' + 'MaxHeap: ' + '\033[0m')
 # region MaxHeap test
 max_heap = MaxHeap()
 numbers = [ 10, 2, 5, 18, 22 ]
@@ -21,7 +21,7 @@ while max_heap.get_length() > 0:
 #
 # endregion
 
-print('\033[31m' + 'Treap: ' + '\033[0m')
+print('\n\033[31m' + 'Treap: ' + '\033[0m')
 # region Treap test
 # endregion
 # region Treap notes
@@ -30,7 +30,7 @@ print('\033[31m' + 'Treap: ' + '\033[0m')
 # A treap delete can be done by setting the node's priority such that the node should be a leaf, percolating the node down using rotations until the node is a leaf, and then removing the node.
 # endregion
 
-print('\033[31m' + 'Priority Queue: ' + '\033[0m')
+print('\n\033[31m' + 'Priority Queue: ' + '\033[0m')
 # region PriorityQueue test
 items_to_insert = [54, 71, 22, 33, 18, 64, 91]
 

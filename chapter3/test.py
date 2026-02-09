@@ -1,9 +1,9 @@
 from chapter3.Stack import Stack
 from chapter3.StackList import StackList
 
-print('\033[1;32m' + '-----Chapter 3-----' + '\033[0m')
+print('\n\033[1;32m' + '-----Chapter 3-----' + '\033[0m')
 
-print('\033[31m' + 'Stack: ' + '\033[0m')
+print('\n\033[31m' + 'Stack: ' + '\033[0m')
 # region Stack test
 stack = Stack()
 stack.push(1)
@@ -16,7 +16,7 @@ print(str(stack.pop()) + ", " + str(stack.pop()) + ", " + str(stack.pop()))
 # Linked-List stack - uses a linked list to create the stack
 # endregion
 
-print('\033[31m' + 'StackList: ' + '\033[0m')
+print('\n\033[31m' + 'StackList: ' + '\033[0m')
 # region StackList test
 stackList = StackList()
 stackList.push(45)

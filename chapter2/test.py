@@ -1,9 +1,9 @@
 from chapter2.DoublyLinkedList import DoublyLinkedList
 from chapter2.SinglyLinkedList import SinglyLinkedList
 
-print('\033[1;32m' + '-----Chapter 2-----' + '\033[0m')
+print('\n\033[1;32m' + '-----Chapter 2-----' + '\033[0m')
 
-print('\033[31m' + 'SinglyLinkedList: ' + '\033[0m')
+print('\n\033[31m' + 'SinglyLinkedList: ' + '\033[0m')
 # region SinglyLinkedList test
 singleList = SinglyLinkedList()
 singleList.append(3)
@@ -19,7 +19,7 @@ singleList.print()
 # the list has a reference to the first (head) and last (tail) node
 # endregion
 
-print('\033[31m' + 'DoublyLinkedList: ' + '\033[0m')
+print('\n\033[31m' + 'DoublyLinkedList: ' + '\033[0m')
 # region DoublyLinkedList test
 doubleList = DoublyLinkedList()
 doubleList.append("a")

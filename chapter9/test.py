@@ -1,6 +1,6 @@
-print('\033[1;32m' + '-----Chapter 9-----' + '\033[0m')
+print('\n\033[1;32m' + '-----Chapter 9-----' + '\033[0m')
 
-print('\033[31m' + 'Set: ' + '\033[0m')
+print('\n\033[31m' + 'Set: ' + '\033[0m')
 # region test
 # endregion
 # region notes

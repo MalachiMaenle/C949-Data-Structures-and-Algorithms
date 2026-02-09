@@ -1,8 +1,8 @@
 from chapter8.Set import Set
 
-print('\033[1;32m' + '-----Chapter 8-----' + '\033[0m')
+print('\n\033[1;32m' + '-----Chapter 8-----' + '\033[0m')
 
-print('\033[31m' + 'Set: ' + '\033[0m')
+print('\n\033[31m' + 'Set: ' + '\033[0m')
 # region Set test
 def show_set(set1, set_name):
     print(set_name + ": ", end="")
@@ -73,7 +73,7 @@ show_set(setB.map(map_mod_10), "Set B mapped % 10")
 # map - makes a new set using a function of an old set
 # endregion
 
-print('\033[31m' + 'Python Default set(): ' + '\033[0m')
+print('\n\033[31m' + 'Python Default set(): ' + '\033[0m')
 # region set() test
 items_to_add = {"Bread", "Butter", "Jam", "Milk", "Cereal"}
 

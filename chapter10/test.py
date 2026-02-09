@@ -1,8 +1,8 @@
 from chapter10.Tree234 import Tree234
 
-print('\033[1;32m' + '-----Chapter 10-----' + '\033[0m')
+print('\n\033[1;32m' + '-----Chapter 10-----' + '\033[0m')
 
-print('\033[31m' + 'B-Trees: ' + '\033[0m')
+print('\n\033[31m' + 'B-Trees: ' + '\033[0m')
 # region B-Trees test
 keys_to_insert = [15, 42, 77, 36, 19, 47, 28, 39, 55, 73, 99]
 keys_to_remove = [15, 47, 40, 19, 55, 77, 58, 28]
